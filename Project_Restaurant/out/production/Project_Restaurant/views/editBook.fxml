@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="1019.0" style="-fx-background-color: #211A12;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.editBook">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b0707" height="72.0" layoutX="20.0" layoutY="20.0" stroke="WHITE" strokeType="INSIDE" width="976.0" />
+       <ImageView fitHeight="72.0" fitWidth="176.0" layoutX="420.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@../images/logo4.png" />
+           </image>
+       </ImageView>
+      <ImageView id="beforeArrow" fitHeight="46.0" fitWidth="62.0" layoutX="24.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#464646" height="461.0" layoutX="20.0" layoutY="113.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 85%;" width="976.0" />
+      <Label layoutX="408.0" layoutY="134.0" prefHeight="34.0" prefWidth="205.0" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="260.0" layoutY="187.0" prefHeight="34.0" prefWidth="61.0" text="Name" textFill="#fcfcfc">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="415.0" layoutY="189.0" prefHeight="29.0" prefWidth="187.0" />
+      <Label layoutX="260.0" layoutY="237.0" prefHeight="34.0" prefWidth="38.0" text="Date" textFill="#fcfcfc">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtVgMenu" layoutX="415.0" layoutY="411.0" prefHeight="29.0" prefWidth="187.0" />
+      <TextField fx:id="txtDate" layoutX="415.0" layoutY="248.0" prefHeight="29.0" prefWidth="187.0" />
+      <TextField fx:id="txtDinners" layoutX="415.0" layoutY="302.0" prefHeight="29.0" prefWidth="187.0" />
+      <Label layoutX="260.0" layoutY="300.0" prefHeight="34.0" prefWidth="136.0" text="Number of diners" textFill="#fcfcfc">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="260.0" layoutY="355.0" prefHeight="34.0" prefWidth="115.0" text="Table Number" textFill="#fcfcfc">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTable" layoutX="415.0" layoutY="357.0" prefHeight="29.0" prefWidth="187.0" />
+      <Button fx:id="btnSaveChanges" layoutX="459.0" layoutY="463.0" mnemonicParsing="false" onAction="#ClickEditR" prefHeight="46.0" prefWidth="102.0" style="-fx-background-color: #FFA94B; -fx-border-radius: 0;" text="Save Changes" />
+      <ImageView fitHeight="66.0" fitWidth="216.0" layoutX="28.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/unnamed1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="76.0" layoutY="500.0" text="Book">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="260.0" layoutY="409.0" prefHeight="34.0" prefWidth="92.0" text="Vegetarian" textFill="#fcfcfc">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGoBack" layoutX="40.0" layoutY="33.0" mnemonicParsing="false" onAction="#ClickGoBack" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: #FFA94B;" text="Back" />
+      <Button fx:id="btnDeleteBook" layoutX="875.0" layoutY="507.0" mnemonicParsing="false" onAction="#ClickDeleteBook" prefHeight="52.0" prefWidth="102.0" style="-fx-background-color: #FFA94B;" text="Delete Book" />
+   </children>
+</AnchorPane>
