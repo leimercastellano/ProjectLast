@@ -17,6 +17,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import models.Book;
+import resources.ReadProperties;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -25,7 +26,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class addBook implements Initializable {
-    //TextField
+   ReadProperties readP = new ReadProperties();
 
     @FXML
     private TextField txtId;
@@ -140,7 +141,7 @@ public class addBook implements Initializable {
      * Agregamos una imagen a los botones
      */
     public void btnImg() {
-        Image imageDecline = new Image(getClass().getResourceAsStream("\\..\\images\\gobackCircle.png"));
+        Image imageDecline = new Image(getClass().getResourceAsStream(readP.getrImages()+"gobackCircle.png"));
 
         ImageView imageView1 = new ImageView(imageDecline);
         imageView1.setFitHeight(30);
@@ -159,7 +160,7 @@ public class addBook implements Initializable {
     public void clickGoBack() {
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("\\..\\views\\home.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(readP.getrView()+"home.fxml"));
             Stage stage = (Stage) btnGoBack.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);

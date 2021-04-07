@@ -31,13 +31,13 @@
       </TableView>
       <Label layoutX="56.0" layoutY="164.0" prefHeight="34.0" prefWidth="27.0" text="Id:" textFill="#fcfcfc">
          <font>
-            <Font size="17.0" />
+            <Font size="15.0" />
          </font>
       </Label>
       <TextField fx:id="txtId" layoutX="117.0" layoutY="167.0" prefHeight="29.0" prefWidth="187.0" />
       <Label layoutX="40.0" layoutY="203.0" prefHeight="34.0" prefWidth="61.0" text="Name" textFill="#fcfcfc">
          <font>
-            <Font size="17.0" />
+            <Font size="15.0" />
          </font>
       </Label>
       <TextField fx:id="txtName" layoutX="117.0" layoutY="206.0" prefHeight="29.0" prefWidth="187.0" />

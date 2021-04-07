@@ -18,6 +18,10 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException, SQLException {
+ReadProperties r = new ReadProperties();
+
+
+
  /*       String date = "15/11/2021";
         String[] date1 = date.split("/");
 

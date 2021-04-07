@@ -12,6 +12,8 @@ public class ReadProperties {
     private static String jdbc;
     private static String user;
     private static String password;
+    private static String rView;
+    private static String rImages;
 
 
     /**
@@ -53,6 +55,15 @@ public class ReadProperties {
                 case "password":
                     password = propiedades.get(clave).toString();
                     break;
+                case "ruta_view":
+                    rView = propiedades.get(clave).toString();
+                    break;
+                case "ruta_img":
+                    rImages = propiedades.get(clave).toString();
+                    break;
+
+
+
 
             }
 
@@ -60,6 +71,13 @@ public class ReadProperties {
 
     }
 
+    public String getrView() {
+        return rView;
+    }
+
+    public String getrImages() {
+        return rImages;
+    }
 
     public String getDatabase() {
         return database;

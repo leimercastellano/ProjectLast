@@ -23,6 +23,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import models.Book;
 import models.Restaurant;
+import resources.ReadProperties;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class home implements Initializable {
+    ReadProperties readP = new ReadProperties();
     public static int positionRestaurant;
     public static Restaurant restaurantSelected;
     static String selected = principal.seletedMethod;
@@ -103,7 +105,7 @@ public class home implements Initializable {
 
     public void clickAddRestaurant(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("\\..\\views\\addRestaurant.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(readP.getrView()+"addRestaurant.fxml"));
             Stage stage = (Stage) btnAddRestaurant.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
@@ -116,7 +118,7 @@ public class home implements Initializable {
         selection();
         if (restaurantSelected != null) {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("\\..\\views\\consultBooks.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource(readP.getrView()+"consultBooks.fxml"));
                 Stage stage = (Stage) btnConsultBook.getScene().getWindow();
                 Scene scene = new Scene(loader.load());
                 stage.setScene(scene);
@@ -137,7 +139,7 @@ public class home implements Initializable {
         selection();
         if (restaurantSelected != null) {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("\\..\\views\\editRestaurant.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource(readP.getrView()+"editRestaurant.fxml"));
                 Stage stage = (Stage) btnEditRestaurant.getScene().getWindow();
                 Scene scene = new Scene(loader.load());
                 stage.setScene(scene);
@@ -165,7 +167,7 @@ public class home implements Initializable {
         selection();
         if (restaurantSelected != null) {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("\\..\\views\\AddBook.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource(readP.getrView()+"addBook.fxml"));
                 Stage stage = (Stage) btnAddBook.getScene().getWindow();
                 Scene scene = new Scene(loader.load());
                 stage.setScene(scene);

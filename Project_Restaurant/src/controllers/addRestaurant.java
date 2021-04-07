@@ -19,6 +19,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import models.Restaurant;
+import resources.ReadProperties;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -28,7 +29,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class addRestaurant implements Initializable {
-
+ReadProperties readP = new ReadProperties();
     @FXML
     private Button btnBack;
     @FXML
@@ -59,7 +60,7 @@ public class addRestaurant implements Initializable {
     private ObservableList<Restaurant> restaurantObservableList;
 
     public void btnImg() {
-        Image imageDecline = new Image(getClass().getResourceAsStream("\\..\\images\\gobackCircle.png"));
+        Image imageDecline = new Image(getClass().getResourceAsStream(readP.getrImages()+"gobackCircle.png"));
 
         ImageView imageView1 = new ImageView(imageDecline);
         imageView1.setFitHeight(30);
@@ -157,7 +158,7 @@ public class addRestaurant implements Initializable {
 
     public void goBack(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("\\..\\views\\home.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(readP.getrView()+"home.fxml"));
             Stage stage = (Stage) btnBack.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);

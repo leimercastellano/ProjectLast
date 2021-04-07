@@ -20,6 +20,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import models.Book;
 import models.Restaurant;
+import resources.ReadProperties;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class consultBook implements Initializable {
+    ReadProperties readP= new ReadProperties();
     public static int idBookSelectioned = 0;
     @FXML
     private Button btnGoBack;
@@ -73,7 +75,7 @@ public class consultBook implements Initializable {
     }
 
     public void btnImg() {
-        Image imageDecline = new Image(getClass().getResourceAsStream("\\..\\images\\gobackCircle.png"));
+        Image imageDecline = new Image(getClass().getResourceAsStream(readP.getrImages()+"gobackCircle.png"));
 
         ImageView imageView1 = new ImageView(imageDecline);
         imageView1.setFitHeight(30);
@@ -129,7 +131,7 @@ public class consultBook implements Initializable {
 
     public void clickGoBack() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("\\..\\views\\home.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(readP.getrView()+"home.fxml"));
             Stage stage = (Stage) btnGoBack.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
@@ -168,7 +170,7 @@ public class consultBook implements Initializable {
         selection();
         if (idBookSelectioned != 0) {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("\\..\\views\\editBook.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource(readP.getrView()+"editBook.fxml"));
                 Stage stage = (Stage) btnEdit.getScene().getWindow();
                 Scene scene = new Scene(loader.load());
                 stage.setScene(scene);
